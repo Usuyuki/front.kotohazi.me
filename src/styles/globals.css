@@ -1,0 +1,53 @@
+/** @format */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Material+Iconsを自前に変更 */
+@font-face {
+  font-display: swap;
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), url(/fonts/MaterialIconsRound-Regular.otf);
+}
+@font-face {
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Kiwi Maru";
+  src: url("/fonts/KiwiMaru-Regular.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --usuyuki_white: #f4f5f7;
+  --usuyuki_black: #333333;
+  --u_c_1: #d9cd47;
+  --u_c_2: #f2ee93;
+  --u_c_3: #e7f2f6;
+  --u_c_4: #9cd9d4;
+  --u_c_5: #126c6d;
+  --swiper-theme-color: var(--u_c_5) !important;
+  --swiper-pagination-bullet-inactive-color: var(--u_c_5) !important;
+}
+
+.kiwi-maru {
+  font-family: "Kiwi Maru";
+}
