@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import Head from "next/head";
-import { ReactNode } from "react";
 
-const Layout = ({ props: Props }) => {
+const Layout = ({ Props: props }) => {
   return (
     <div>
       <Head>
@@ -56,7 +55,6 @@ const Layout = ({ props: Props }) => {
 };
 
 type Props = {
-  children?: ReactNode;
   title_prefix: string;
   pageTitle: string;
 };
