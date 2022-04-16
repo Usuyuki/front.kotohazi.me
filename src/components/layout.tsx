@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Head from "next/head";
+import { ReactNode } from "react";
 
-const Layout = ({ Props: props }) => {
+const Layout = ({ children }: Props) => {
   return (
     <div>
       <Head>
@@ -15,7 +16,7 @@ const Layout = ({ Props: props }) => {
           name="description"
           content="勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？"
         />
-        <title>{props.title_prefix} | コトハジメ</title>
+        <title>コトハジメ</title>
         {/* ogp */}
         <meta property="og:title" content="コトハジメ" />
         <meta
@@ -41,22 +42,21 @@ const Layout = ({ Props: props }) => {
           href="/img/favicon/icon-192x192.png"
         />
       </Head>
-      <nav className="flex flex-rows p-2 bg-red-500 text-white font-bold">
+      <nav className="flex flex-rows p-2 bg-green-500 text-white font-bold">
         <Link href="/">
           <a>Home</a>
         </Link>
-        <Link href="/about">
-          <a>About </a>
+        <Link href="/whitespace">
+          <a>whitespace </a>
         </Link>
       </nav>
-      {props.title}
+      {children}
     </div>
   );
 };
 
 type Props = {
-  title_prefix: string;
-  pageTitle: string;
+  children?: ReactNode;
 };
 
 export default Layout;

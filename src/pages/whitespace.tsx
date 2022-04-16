@@ -2,16 +2,16 @@
 
 import type { NextPage } from "next";
 import Head from "next/head";
+import Layout from "@/components/layout";
 
 const WhiteSpace: NextPage = () => {
   return (
     <div>
-      <Head>
-        <title>whitespace</title>
-      </Head>
-      <main>
-        <h1>ここは何もないページです。</h1>
-      </main>
+      <Layout>
+        <main>
+          <h1>ここは何もない虚無の ページです。</h1>
+        </main>
+      </Layout>
     </div>
   );
 };

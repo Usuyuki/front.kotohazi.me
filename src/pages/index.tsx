@@ -1,12 +1,15 @@
 /** @format */
 
 import type { NextPage } from "next";
+import Head from "next/head";
 import Layout from "@/components/layout";
 const Index: NextPage = () => {
   return (
     <div>
-      <Layout title_prefix="トップ" pageTitle="トップ">
-        <h1 className="text-3xl kiwi-maru">コトハジメ、しませんか？</h1>
+      <Layout>
+        <h1 className="text-3xl kiwi-maru mt-20 ml-20">
+          コトハジメ、しませんか？
+        </h1>
       </Layout>
     </div>
   );
