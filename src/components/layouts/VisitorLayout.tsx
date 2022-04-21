@@ -5,6 +5,7 @@ import Head from 'next/head';
 import HeadOGP from '@/components/head/HeadOGP';
 import { VisitorLayoutType } from '@/types/Layout';
 import VisitorHeader from '../header/VisitorHeader';
+import NormalFooter from '../footer/NormalFooter';
 
 const Layout = ({ children, titlePrefix, bgColorClass, description }: VisitorLayoutType) => {
   return (
@@ -14,6 +15,7 @@ const Layout = ({ children, titlePrefix, bgColorClass, description }: VisitorLay
         <main className={'' + bgColorClass}>
           <VisitorHeader />
           {children}
+          <NormalFooter />
         </main>
       </div>
     </div>

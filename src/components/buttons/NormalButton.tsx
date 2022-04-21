@@ -1,4 +1,4 @@
-import { ButtonType } from '@/types/Buttons';
+import { ButtonType } from '@/types/components/Buttons';
 import Link from 'next/link';
 import { FC } from 'react';
 const NormalButton: FC<ButtonType> = ({ title, url, addClass, isInside }) => {

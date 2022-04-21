@@ -1,11 +1,11 @@
-import { HeaderType } from '@/types/Headers';
+import { HeaderType } from '@/types/components/Headers';
 import Link from 'next/link';
 import { FC } from 'react';
 const VisitorHeader: FC<HeaderType> = ({}) => {
   return (
-    <div>
+    <header>
       <p>へっだー</p>
-    </div>
+    </header>
   );
 };
 export default VisitorHeader;
