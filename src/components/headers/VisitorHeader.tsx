@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { FC } from 'react';
 const VisitorHeader: FC<HeaderType> = ({}) => {
   return (
-    <header>
-      <p>へっだー</p>
+    <header className='flex justify-center items-center'>
+      <Link href='/'>
+        <a className='kiwi-maru'>コトハジメ</a>
+      </Link>
     </header>
   );
 };

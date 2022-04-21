@@ -1,22 +1,23 @@
 /** @format */
 
-import Link from 'next/link';
-import Head from 'next/head';
 import HeadOGP from '@/components/head/HeadOGP';
 import { VisitorLayoutType } from '@/types/Layout';
-import VisitorHeader from '../header/VisitorHeader';
-import NormalFooter from '../footer/NormalFooter';
+import VisitorHeader from '../headers/VisitorHeader';
+import NormalFooter from '../footers/NormalFooter';
 
-const Layout = ({ children, titlePrefix, bgColorClass, description }: VisitorLayoutType) => {
+const Layout = ({ children, titlePrefix, bgColorClass, description, pageTitle }: VisitorLayoutType) => {
   return (
     <div>
       <HeadOGP description={description} titlePrefix={titlePrefix} />
-      <div className={'' + bgColorClass}>
-        <main className={'' + bgColorClass}>
+      <div className={bgColorClass}>
+        <div className='main-wrapper'>
           <VisitorHeader />
-          {children}
+          <main>
+            {pageTitle ? <h1 className='my-4 text-5xl text-center kiwi-maru'>-{pageTitle}-</h1> : ''}
+            {children}
+          </main>
           <NormalFooter />
-        </main>
+        </div>
       </div>
     </div>
   );
