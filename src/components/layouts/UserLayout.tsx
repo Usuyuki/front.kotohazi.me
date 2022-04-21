@@ -1,11 +1,9 @@
 /** @format */
 
-import Link from 'next/link';
-import Head from 'next/head';
 import HeadOGP from '@/components/head/HeadOGP';
 import { UserLayoutType } from '@/types/Layout';
-import VisitorHeader from '../header/VisitorHeader';
-import NormalFooter from '../footer/NormalFooter';
+import VisitorHeader from '../headers/VisitorHeader';
+import NormalFooter from '../footers/NormalFooter';
 
 const description = 'コトハジメの裏側にいます。';
 const bgColorClass = 'bg-high';

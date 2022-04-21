@@ -10,7 +10,7 @@ const NormalFooter: FC<FooterType> = ({}) => {
       <Link href='/terms'>
         <a className='mx-4 text-k_1 kiwi-maru'>利用規約</a>
       </Link>
-      <Link href='/releaseNote'>
+      <Link href='/announcement'>
         <a className='mx-4 text-k_1 kiwi-maru'>お知らせ</a>
       </Link>
       <Link href='/releaseNote'>
@@ -19,7 +19,12 @@ const NormalFooter: FC<FooterType> = ({}) => {
       <Link href='/license'>
         <a className='mx-4 text-k_1 kiwi-maru'>ライセンス</a>
       </Link>
-      <a target='_blank' rel='noopener noreferrer' className='mx-4' href='https://github.com/Usuyuki/front.kotohazi.me'>
+      <a
+        target='_blank'
+        rel='noopener noreferrer'
+        className='mx-4 text-k_1 kiwi-maru'
+        href='https://github.com/Usuyuki/front.kotohazi.me'
+      >
         GitHub
       </a>
     </footer>

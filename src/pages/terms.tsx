@@ -2,14 +2,14 @@
 
 import type { NextPage } from 'next';
 import Layout from '@/components/layouts/VisitorLayout';
-const custom404: NextPage = () => {
+const terms: NextPage = () => {
   return (
     <div>
-      <Layout titlePrefix='404' pageTitle='404 Not found' bgColorClass='bg-low' description='404 Not found'>
+      <Layout titlePrefix='利用規約' pageTitle='利用規約' bgColorClass='bg-low' description='コトハジメの利用規約'>
         <div></div>
       </Layout>
     </div>
   );
 };
 
-export default custom404;
+export default terms;

@@ -8,7 +8,6 @@ const Index: NextPage = () => {
     <div>
       <Layout
         titlePrefix='トップ'
-        pageTitle='トップ'
         bgColorClass='bg-all'
         description='勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？'
       >
