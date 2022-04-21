@@ -3,8 +3,9 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import { ReactNode } from 'react';
+import { LayoutProps } from '@/interfaces/index';
 
-const Layout = ({ children }: Props) => {
+const Layout = ({ children, titlePrefix }: LayoutProps) => {
   return (
     <div>
       <Head>
@@ -13,7 +14,7 @@ const Layout = ({ children }: Props) => {
         <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
 
         <meta name='description' content='勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？' />
-        <title>コトハジメ</title>
+        <title>{titlePrefix} | コトハジメ</title>
         {/* ogp */}
         <meta property='og:title' content='コトハジメ' />
         <meta
@@ -42,10 +43,6 @@ const Layout = ({ children }: Props) => {
       <div>{children}</div>
     </div>
   );
-};
-
-type Props = {
-  children?: ReactNode;
 };
 
 export default Layout;
