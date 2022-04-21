@@ -1,11 +1,21 @@
 /** @format */
-
+:root {
+  --k_1: #fffdf2;
+  --k_2: #7ec7d8;
+  --k_3: #c7ffc4;
+  --k_4: #ccaa8f;
+  --k_5: #1a1616;
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -20,34 +30,39 @@ a {
 /* Material+Iconsを自前に変更 */
 @font-face {
   font-display: swap;
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local("Material Icons"), url(/fonts/MaterialIconsRound-Regular.otf);
+  src: local('Material Icons'), url(/fonts/MaterialIconsRound-Regular.otf);
 }
 @font-face {
   font-display: swap;
   font-weight: 400;
   font-style: normal;
-  font-family: "Kiwi Maru";
-  src: url("/fonts/KiwiMaru-Regular.ttf") format("truetype");
+  font-family: 'Kiwi Maru';
+  src: url('/fonts/KiwiMaru-Regular.ttf') format('truetype');
 }
 
-html {
-  scroll-behavior: smooth;
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh ;
 }
-:root {
-  --usuyuki_white: #f4f5f7;
-  --usuyuki_black: #333333;
-  --u_c_1: #d9cd47;
-  --u_c_2: #f2ee93;
-  --u_c_3: #e7f2f6;
-  --u_c_4: #9cd9d4;
-  --u_c_5: #126c6d;
-  --swiper-theme-color: var(--u_c_5) !important;
-  --swiper-pagination-bullet-inactive-color: var(--u_c_5) !important;
-}
-
 .kiwi-maru {
-  font-family: "Kiwi Maru";
+  font-family: 'Kiwi Maru';
+}
+
+.bg-top {
+  background: linear-gradient(
+    180deg,
+    #74bbcc 0.01%,
+    #fffdf2 0.02%,
+    #7ec7d8 0.03%,
+    #c7ffc4 53.12%,
+    #6d5b4e 75%,
+    #1a1616 100%
+  );
+}
+.bg-kotohazime {
+  background: linear-gradient(180deg, #fffdf2 0%, #7ec7d8 100%);
 }

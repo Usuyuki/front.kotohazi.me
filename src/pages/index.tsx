@@ -1,13 +1,20 @@
 /** @format */
 
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Layout from '@/components/layout';
+import Layout from '@/components/layouts/VisitorLayout';
+import NormalButton from '@/components/buttons/NormalButton';
 const Index: NextPage = () => {
   return (
     <div>
-      <Layout>
-        <h1 className='mt-20 ml-20 text-3xl text-center kiwi-maru'>コトハジメ、しませんか？</h1>
+      <Layout
+        titlePrefix='トップ'
+        pageTitle='トップ'
+        bgColorClass='bg-top'
+        description='勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？'
+      >
+        <h1 className='mt-20 text-8xl text-center kiwi-maru'>コトハジメ</h1>
+        <p className='mt-12 text-center kiwi-maru'>コトハジメはちょっとしたアンケートをハヤメに作れるサービスです。</p>
+        <NormalButton title='虚無へ行く' url='/whitespace' isInside={true} />
       </Layout>
     </div>
   );
