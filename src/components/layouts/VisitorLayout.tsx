@@ -11,12 +11,12 @@ const Layout = ({ children, titlePrefix, bgColorClass, description }: VisitorLay
   return (
     <div>
       <HeadOGP description={description} titlePrefix={titlePrefix} />
-      <div className={'' + bgColorClass}>
-        <main className={'' + bgColorClass}>
+      <div className={bgColorClass}>
+        <div className='main-wrapper'>
           <VisitorHeader />
-          {children}
+          <main>{children}</main>
           <NormalFooter />
-        </main>
+        </div>
       </div>
     </div>
   );

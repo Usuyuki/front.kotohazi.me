@@ -9,7 +9,7 @@ const Index: NextPage = () => {
       <Layout
         titlePrefix='トップ'
         pageTitle='トップ'
-        bgColorClass='bg-top'
+        bgColorClass='bg-all'
         description='勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？'
       >
         <h1 className='mt-20 text-8xl text-center kiwi-maru'>コトハジメ</h1>

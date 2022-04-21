@@ -10,6 +10,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
 }
@@ -43,16 +44,24 @@ a {
   src: url('/fonts/KiwiMaru-Regular.ttf') format('truetype');
 }
 
-main {
+.main-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh ;
+}
+header {
+  min-height: 50px;
+}
+main {
+  min-height: calc(100vh - 50px - 50px);
+}
+footer {
+  min-height: 50px;
 }
 .kiwi-maru {
   font-family: 'Kiwi Maru';
 }
 
-.bg-top {
+.bg-all {
   background: linear-gradient(
     180deg,
     #74bbcc 0.01%,
@@ -63,6 +72,12 @@ main {
     #1a1616 100%
   );
 }
-.bg-kotohazime {
+.bg-high {
   background: linear-gradient(180deg, #fffdf2 0%, #7ec7d8 100%);
+}
+.bg-middle {
+  background: linear-gradient(180deg, #7ec7d8 0%, #c7ffc4 100%);
+}
+.bg-low {
+  background: linear-gradient(180deg, #c7ffc4 0%, #ccaa8f 100%);
 }
