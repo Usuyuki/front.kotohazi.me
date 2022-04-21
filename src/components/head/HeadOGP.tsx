@@ -1,6 +1,7 @@
 import { HeadOGPType } from '@/types/Layout';
 import Head from 'next/head';
-export default function HeadOGP({ description, titlePrefix }: HeadOGPType) {
+import { FC } from 'react';
+const HeadOGP: FC<HeadOGPType> = ({ description, titlePrefix }) => {
   return (
     <Head>
       <meta httpEquiv='content-language' content='ja' />
@@ -24,4 +25,5 @@ export default function HeadOGP({ description, titlePrefix }: HeadOGPType) {
       <link rel='icon' type='image/png' href='/img/favicon/icon-192x192.png' />
     </Head>
   );
-}
+};
+export default HeadOGP;
