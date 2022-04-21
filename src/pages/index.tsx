@@ -7,7 +7,7 @@ const Index: NextPage = () => {
   return (
     <div>
       <Layout>
-        <h1 className='text-3xl kiwi-maru mt-20 ml-20'>コトハジメ、しませんか？</h1>
+        <h1 className='mt-20 ml-20 text-3xl text-center kiwi-maru'>コトハジメ、しませんか？</h1>
       </Layout>
     </div>
   );
