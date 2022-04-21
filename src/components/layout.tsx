@@ -1,56 +1,45 @@
 /** @format */
 
-import Link from "next/link";
-import Head from "next/head";
-import { ReactNode } from "react";
+import Link from 'next/link';
+import Head from 'next/head';
+import { ReactNode } from 'react';
 
 const Layout = ({ children }: Props) => {
   return (
     <div>
       <Head>
-        <meta httpEquiv="content-language" content="ja" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv='content-language' content='ja' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
 
-        <meta
-          name="description"
-          content="勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？"
-        />
+        <meta name='description' content='勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？' />
         <title>コトハジメ</title>
         {/* ogp */}
-        <meta property="og:title" content="コトハジメ" />
+        <meta property='og:title' content='コトハジメ' />
         <meta
-          property="og:description"
-          content="勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？"
+          property='og:description'
+          content='勉強会やちょっとしたイベントのフィードバックに。コトハジメ、しませんか？'
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kotohazi.me/" />
-        <meta property="og:image" content="https://kotohazi.me/img/ogp.png" />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://kotohazi.me/' />
+        <meta property='og:image' content='https://kotohazi.me/img/ogp.png' />
         {/* <meta property="fb:app_id"      content="" /> */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@usuyuki26" />
-        <meta name="twitter:creator" content="@usuyuki26" />
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:site' content='@usuyuki26' />
+        <meta name='twitter:creator' content='@usuyuki26' />
         {/* ふぁびこん */}
-        <link
-          rel="apple-touch-icon"
-          type="image/png"
-          href="/img/favicon/apple-touch-icon-180x180.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/img/favicon/icon-192x192.png"
-        />
+        <link rel='apple-touch-icon' type='image/png' href='/img/favicon/apple-touch-icon-180x180.png' />
+        <link rel='icon' type='image/png' href='/img/favicon/icon-192x192.png' />
       </Head>
-      <nav className="flex flex-rows p-2 bg-green-500 text-white font-bold">
-        <Link href="/">
+      <nav className='flex flex-row p-2 font-bold text-white bg-green-500'>
+        <Link href='/'>
           <a>Home</a>
         </Link>
-        <Link href="/whitespace">
+        <Link href='/whitespace'>
           <a>whitespace </a>
         </Link>
       </nav>
-      {children}
+      <div>{children}</div>
     </div>
   );
 };
