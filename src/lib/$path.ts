@@ -5,8 +5,17 @@ export const pagesPath = {
   "announcement": {
     $url: (url?: { hash?: string }) => ({ pathname: '/announcement' as const, hash: url?.hash })
   },
+  "callback": {
+    $url: (url?: { hash?: string }) => ({ pathname: '/callback' as const, hash: url?.hash })
+  },
+  "home": {
+    $url: (url?: { hash?: string }) => ({ pathname: '/home' as const, hash: url?.hash })
+  },
   "license": {
     $url: (url?: { hash?: string }) => ({ pathname: '/license' as const, hash: url?.hash })
+  },
+  "login": {
+    $url: (url?: { hash?: string }) => ({ pathname: '/login' as const, hash: url?.hash })
   },
   "privacyPolicy": {
     $url: (url?: { hash?: string }) => ({ pathname: '/privacyPolicy' as const, hash: url?.hash })
