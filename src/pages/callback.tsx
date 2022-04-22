@@ -12,17 +12,13 @@ const handleSocialLoginRequest = async (provider: string) => {
 const callback: NextPage = () => {
   return (
     <div>
-      <Layout titlePrefix='ログイン' pageTitle='ログイン' bgColorClass='bg-low' description='コトハジメのログイン'>
-        <div className='border-2 border-k_4 border-dashed'>
-          <button
-            type='submit'
-            onClick={() => {
-              handleSocialLoginRequest('google');
-            }}
-          >
-            Login with Google
-          </button>
-        </div>
+      <Layout
+        titlePrefix='コールバック'
+        pageTitle='コールバック'
+        bgColorClass='bg-low'
+        description='コトハジメのログイン'
+      >
+        <div className='border-2 border-k_4 border-dashed'>こーるばっく</div>
       </Layout>
     </div>
   );

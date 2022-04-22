@@ -5,7 +5,7 @@ import Layout from '@/components/layouts/UserLayout';
 const handleSocialLoginRequest = async () => {
   const cookies = parseCookies();
 
-  const { data } = await axios.get('https://localhost/api/me', {
+  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/userInfo`, {
     headers: {
       Authorization: 'Bearer ' + cookies['api_token'],
     },
@@ -16,16 +16,7 @@ const handleSocialLoginRequest = async () => {
 
 const home: NextPage = () => {
   const data = handleSocialLoginRequest();
-  return (
-    <Layout
-      titlePrefix='トップ'
-    >
-      <h1 className='mt-20 text-8xl text-center kiwi-maru'>コトハジメ</h1>
-      <p className='mt-12 text-center kiwi-maru'>コトハジメはちょっとしたアンケートをハヤメに作れるサービスです。</p>
-    
-    </Layout>
-  );
-  );
+  return <Layout titlePrefix='トップ'></Layout>;
 };
 
 export default home;
