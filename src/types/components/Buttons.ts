@@ -7,3 +7,8 @@ export type ButtonType = {
   addClass?: string;
   isInside: boolean;
 };
+export type DocsLinkButtonType = {
+  title: string;
+  icon: string;
+  url: string;
+};

@@ -5,6 +5,8 @@
   --k_3: #c7ffc4;
   --k_4: #ccaa8f;
   --k_5: #1a1616;
+  --header_length: 50px;
+  --footer_length: 50px;
 }
 html,
 body {
@@ -53,18 +55,83 @@ h6 {
   src: url('/fonts/KiwiMaru-Regular.ttf') format('truetype');
 }
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/*
+スクロールバー
+ここから
+*/
+/*スクロールバー全体*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+p::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+/*スクロールバーの軌道*/
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  /* background-color: var(--border-main-color); */
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); */
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 170, 143, 0.8);
+  border-radius: 10px;
+  /* box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3); */
+}
+
+.container {
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+}
+
+.inner {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+}
+
+/*
+ここまで
+スクロールバー
+*/
 .main-wrapper {
   max-width: 1200px;
   margin: 0 auto;
 }
 header {
-  min-height: 50px;
+  min-height: var(--header_length);
 }
 main {
-  min-height: calc(100vh - 50px - 50px);
+  min-height: calc(100vh - var(--header_length) - var(--footer_length));
 }
 footer {
-  min-height: 50px;
+  min-height: var(--footer_length);
 }
 .kiwi-maru {
   font-family: 'Kiwi Maru';
@@ -94,4 +161,7 @@ footer {
   background-color: var(--k_4);
   width: 80%;
   height: 2px;
+}
+.rounded-button {
+  border-radius: 73% 27% 80% 20% / 29% 75% 25% 71%;
 }

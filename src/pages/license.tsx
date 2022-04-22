@@ -1,7 +1,7 @@
 /** @format */
 
 import type { NextPage } from 'next';
-import Layout from '@/components/layouts/VisitorLayout';
+import Layout from '@/components/layouts/DocsLayout';
 import LicenseSentence from '@/components/sentence/LicenseSentence';
 import LicenseHeading from '@/components/haedings/licenseHeading';
 const License: NextPage = () => {
