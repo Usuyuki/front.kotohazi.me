@@ -10,7 +10,11 @@ const NormalButton: FC<ButtonType> = ({ title, url, addClass, isInside }) => {
     <Link href={url}>
       <a>
         <div
-          className={'px-3 py-4 border-2 border-sky-500 border-dashed rounded-2xl flex justify-center' + ' ' + addClass}
+          className={
+            'px-3 py-4 mx-4  my-4 border-2 border-sky-500 border-dashed rounded-2xl flex justify-center' +
+            ' ' +
+            addClass
+          }
         >
           <p className='text-2xl'>{title}</p>
         </div>
