@@ -16,7 +16,12 @@ const handleSocialLoginRequest = async () => {
 
 const home: NextPage = () => {
   const data = handleSocialLoginRequest();
-  return <Layout titlePrefix='トップ'></Layout>;
+  console.log('name:', data.id);
+  return (
+    <Layout titlePrefix='トップ'>
+      <div>{data.name}</div>
+    </Layout>
+  );
 };
 
 export default home;

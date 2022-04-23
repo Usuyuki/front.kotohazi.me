@@ -6,7 +6,6 @@ import axios from 'axios';
 
 const handleSocialLoginRequest = async (provider: string) => {
   const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/login/${provider}`);
-  console.log('data:', data.redirect_url);
   window.location.href = data.redirect_url;
 };
 const login: NextPage = () => {
