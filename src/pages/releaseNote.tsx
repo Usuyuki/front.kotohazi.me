@@ -2,7 +2,14 @@
 
 import type { NextPage } from 'next';
 import Layout from '@/components/layouts/VisitorLayout';
-const releaseNote: NextPage = () => {
+
+export const getStaticProps = async () => {
+  const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/release-notes/all`).then((r) => r.json());
+  return { props: { data }, revalidate: 120 };
+};
+
+const releaseNote: NextPage = (data) => {
+  console.log(data);
   return (
     <div>
       <Layout
