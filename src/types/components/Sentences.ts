@@ -2,6 +2,7 @@
  * @description ライセンスの文章用
  */
 import { ReactNode } from 'react';
+import { ReleaseNoteGenre } from '../enum/ReleaseNoteGenre';
 export type LicenseSentenceType = {
   productName: string;
   productUrl: string;
@@ -12,5 +13,16 @@ export type LicenseSentenceType = {
 };
 export type RuleSentenceType = {
   title: string;
-  children: ReactNode;
+  children?: ReactNode;
+};
+export type ReleaseNoteSentenceType = {
+  title: string;
+  date: string;
+  genre: ReleaseNoteGenre;
+  children?: ReactNode;
+};
+export type AnnouncementSentenceType = {
+  title: string;
+  date: string;
+  children?: ReactNode;
 };

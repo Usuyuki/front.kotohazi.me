@@ -15,7 +15,7 @@ const HeadOGP: FC<HeadOGPType> = ({ description, titlePrefix }) => {
       <meta property='og:description' content={description} />
       <meta property='og:type' content='website' />
       <meta property='og:url' content='https://kotohazi.me/' />
-      <meta property='og:image' content='https://kotohazi.me/img/ogp.png' />
+      <meta property='og:image' content='https://kotohazi.me/img/ogp.jpg' />
       {/* <meta property="fb:app_id"      content="" /> */}
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:site' content='@usuyuki26' />
