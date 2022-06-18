@@ -2,14 +2,19 @@
 
 import type { NextPage } from 'next';
 import Layout from '@/components/layouts/VisitorLayout';
-import axios from 'axios';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+const Index: NextPage = () => {
+  const router = useRouter();
+  const isReady = router.isReady;
 
-const handleSocialLoginRequest = async (provider: string) => {
-  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/login/${provider}`);
-  console.log('data:', data.redirect_url);
-  window.location.href = data.redirect_url;
-};
-const callback: NextPage = () => {
+  useEffect(() => {
+    if (isReady) {
+      router.push('/home');
+    }
+  }, [isReady]);
+
+  // pushState の場合
   return (
     <div>
       <Layout
@@ -24,4 +29,4 @@ const callback: NextPage = () => {
   );
 };
 
-export default callback;
+export default Index;
