@@ -65,12 +65,20 @@ const License: NextPage = () => {
             licenseUrl='https://github.com/nunomaduro/larastan/blob/master/LICENSE.md'
           />
           <LicenseSentence
-            productName='SecurityAdvisories'
-            productUrl='https://github.com/Roave/SecurityAdvisories'
-            description='セキュリティ的に問題のあるものを表示するために使用しています。'
-            copyright='Copyright (c) 2014 Roave, LLC'
+            productName='Laravel Sanctum'
+            productUrl='https://github.com/laravel/sanctum'
+            description='api認証で使用しています。'
+            copyright='Copyright (c) Taylor Otwell'
             licenseType='MIT'
-            licenseUrl='https://github.com/Roave/SecurityAdvisories/blob/latest/LICENSE'
+            licenseUrl='https://github.com/laravel/sanctum/blob/2.x/LICENSE.md'
+          />
+          <LicenseSentence
+            productName='Laravel Socialite'
+            productUrl='https://github.com/laravel/socialite'
+            description='ソーシャル認証で使用しています。'
+            copyright='Copyright (c) Taylor Otwell'
+            licenseType='MIT'
+            licenseUrl='https://github.com/laravel/socialite/blob/5.x/LICENSE.md'
           />
           <LicenseSentence
             productName='laravel-ide-helper'
