@@ -1,0 +1,32 @@
+# @format
+
+📖frontend:
+  - src/pages/*
+  - src/components/*
+  - src/styles/*
+  - public/*
+🧩types:
+  - src/types/*
+🏭lib:
+  - src/lib/*
+⚓hooks:
+  - src/hooks/*
+✈ci:
+  - .github/workflows/*
+  - .github/labeler.yml
+⚡infra:
+  - package-lock.json
+  - package.json
+  - .env.example
+📄docs:
+  - README.md
+  - DEVELOPMENT.md
+  - LICENSE
+⚙config:
+  - tailwind.config.js
+  - tsconfig.json
+  - next.config.js
+  - postcss.config.js
+  - .prettierrc.json
+🧪tests:
+  - tests/*
