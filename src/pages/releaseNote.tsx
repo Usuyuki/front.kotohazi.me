@@ -4,10 +4,10 @@ import type { NextPage } from 'next';
 import Layout from '@/components/layouts/VisitorLayout';
 import ReleaseNoteSentence from '@/components/sentence/ReleaseNoteSentence';
 import axios from '@/lib/axios';
-import useSWR from 'swr';
+import UseSWR from 'swr';
 
 const releaseNote: NextPage = () => {
-  const { data, error } = useSWR('/api/release-notes/all', () =>
+  const { data, error } = UseSWR('/api/release-notes/all', () =>
     axios.get('/api/release-notes/all').then((res: any) => res.data),
   );
 
