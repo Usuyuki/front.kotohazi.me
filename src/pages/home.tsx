@@ -1,22 +1,13 @@
 import type { NextPage } from 'next';
-import axios from 'axios';
-import { parseCookies, setCookie, destroyCookie } from 'nookies';
 import Layout from '@/components/layouts/UserLayout';
-const handleSocialLoginRequest = async () => {
-  const cookies = parseCookies();
-
-  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/userInfo`, {
-    headers: {
-      Authorization: 'Bearer ' + cookies['api_token'],
-    },
-  });
-  console.log('data:', data);
-  return data;
-};
+import axios from '@/lib/axios';
+import UseSWR from 'swr';
 
 const home: NextPage = () => {
-  const data = handleSocialLoginRequest();
-  console.log('name:', data.id);
+  const { data, error } = UseSWR('/api/userInfo', () => axios.get('/api/userInfo').then((res: any) => res.data));
+
+  if (error) return <div>エラーが発生しました</div>;
+  if (!data) return <div>読み込み中</div>;
   return (
     <Layout titlePrefix='トップ'>
       <div>{data.name}</div>

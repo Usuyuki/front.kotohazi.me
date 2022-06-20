@@ -26,9 +26,6 @@ export const pagesPath = {
   "releaseNote": {
     $url: (url?: { hash?: string }) => ({ pathname: '/releaseNote' as const, hash: url?.hash })
   },
-  "sample": {
-    $url: (url?: { hash?: string }) => ({ pathname: '/sample' as const, hash: url?.hash })
-  },
   "terms": {
     $url: (url?: { hash?: string }) => ({ pathname: '/terms' as const, hash: url?.hash })
   },
