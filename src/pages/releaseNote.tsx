@@ -3,13 +3,14 @@
 import type { NextPage } from 'next';
 import Layout from '@/components/layouts/VisitorLayout';
 import ReleaseNoteSentence from '@/components/sentence/ReleaseNoteSentence';
-export const getStaticProps = async () => {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/release-notes/all`).then((r) => r.json());
-  return { props: { data }, revalidate: 120 };
-};
+import axios from '@/lib/axios';
+import useSWR from 'swr';
 
-const releaseNote: NextPage = (data) => {
-  console.log(data);
+const releaseNote: NextPage = () => {
+  const { data, error } = useSWR('/api/release-notes/all', () =>
+    axios.get('/api/release-notes/all').then((res: any) => res.data),
+  );
+
   return (
     <div>
       <Layout
