@@ -11,6 +11,8 @@ const releaseNote: NextPage = () => {
     axios.get('/api/release-notes/all').then((res: any) => res.data),
   );
 
+  if (error) return <div>エラーが発生しました</div>;
+  if (!data) return <div>読み込み中</div>;
   return (
     <div>
       <Layout
@@ -20,7 +22,7 @@ const releaseNote: NextPage = () => {
         description='コトハジメのリリースノート'
       >
         <div className='flex flex-col justify-center items-center'>
-          {data.data.map((content, key) => {
+          {data.map((content, key) => {
             return (
               <ReleaseNoteSentence key={key} title={content.title} date={content.date} genre={content.genre}>
                 {content.description}
