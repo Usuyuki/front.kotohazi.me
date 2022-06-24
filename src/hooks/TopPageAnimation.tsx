@@ -3,33 +3,81 @@ import type { NextRouter } from 'next/router';
 
 export function TopPageAnimation(router: NextRouter) {
   useEffect(() => {
+    let time: number = 0;
+    let changeTime: number = 500;
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コ');
-    }, 500);
+    }, time);
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コト');
-    }, 1000);
+    }, time);
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コトハ');
-    }, 1500);
+    }, time);
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コトハジ');
-    }, 2000);
+    }, time);
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コトハジメ');
-    }, 2500);
+    }, time);
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コトハジメ✨');
-    }, 3000);
+    }, time);
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コトハジメ🌟');
-    }, 3500);
+    }, time);
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コトハジメ✨');
-    }, 4000);
+    }, time);
+    time += changeTime;
     setTimeout(function () {
       history.replaceState('', '', '#コトハジメ🌟');
-    }, 4500);
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', '#コトハジメ✨');
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', '#コトハジメ🌟');
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', '#コトハジメ✨');
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', '#コトハジメ🌟');
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', '#コトハジメ✨');
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', '#コトハジメ🌟');
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', '#コトハジメ✨');
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', '#コトハジメ🌟');
+    }, time);
+    time += changeTime;
+    setTimeout(function () {
+      history.replaceState('', '', ' ');
+    }, time);
+    time += changeTime;
   });
   useEffect(() => {
     //クライアントのみで実行
