@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import Button from '@material-ui/core/Button';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import Button from '@mui/material/Button';
+import GoogleIcon from '@mui/icons-material/Google';
 import { Provider } from '@/types/models/OAuth';
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 const LoginButton: FC<Props> = ({ handleSocialLoginRequest }) => (
   <Button
     variant='contained'
-    startIcon={<GitHubIcon />}
+    startIcon={<GoogleIcon />}
     fullWidth
     style={{ color: '#fff', backgroundColor: '#24292e', textTransform: 'none' }}
     onClick={() => {

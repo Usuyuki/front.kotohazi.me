@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import Alert from '@material-ui/lab/Alert';
-import AlertTitle from '@material-ui/lab/AlertTitle';
+import Alert from '@mui/lab/Alert';
+import AlertTitle from '@mui/lab/AlertTitle';
 
 type Props = {
   type: 'error' | 'info' | 'success' | 'warning';

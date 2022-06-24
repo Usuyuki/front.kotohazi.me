@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Typography from '@material-ui/core/Typography';
-import { useTheme } from '@material-ui/core/styles';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import CircularProgress from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
 import VisitorHeader from '@/components/headers/VisitorHeader';
 import GeneralAlert from '@/components/common/info/GeneralAlert';
 

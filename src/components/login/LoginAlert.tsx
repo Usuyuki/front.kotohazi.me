@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import GeneralAlert from '../common/info/GeneralAlert';
+import GeneralAlert from '@/components/common/info/GeneralAlert';
 import { UNKNOWN_STATUS, INTERNAL_SERVER_ERROR } from '@/constants/statusCode';
 
 type Props = {
