@@ -2,7 +2,7 @@
 
 import type { NextPage } from 'next';
 import Layout from '@/components/layouts/VisitorLayout';
-import NormalButton from '@/components/buttons/NormalButton';
+import NormalButton from '@/components/common/buttons/NormalButton';
 import styles from '@/styles/FrontPage.module.css';
 import { useRouter } from 'next/router';
 import { TopPageAnimation } from '@/hooks/TopPageAnimation';

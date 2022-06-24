@@ -2,7 +2,7 @@
 
 import type { NextPage } from 'next';
 import Layout from '@/components/layouts/DocsLayout';
-import RuleSentence from '@/components/sentence/RuleSentence';
+import RuleSentence from '@/components/common/sentence/RuleSentence';
 import Link from 'next/link';
 const privacyPolicy: NextPage = () => {
   return (

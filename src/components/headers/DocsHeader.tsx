@@ -1,6 +1,6 @@
 import { HeaderType } from '@/types/components/Headers';
 import { FC } from 'react';
-import DocsLinkButton from '../buttons/DocsLinkButton';
+import DocsLinkButton from '../common/buttons/DocsLinkButton';
 const DocsHeader: FC<HeaderType> = ({}) => {
   return (
     <nav className='flex justify-center items-center'>
