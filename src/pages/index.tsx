@@ -6,7 +6,7 @@ import NormalButton from '@/components/common/buttons/NormalButton';
 import styles from '@/styles/FrontPage.module.css';
 import { useRouter } from 'next/router';
 import { TopPageAnimation } from '@/hooks/TopPageAnimation';
-
+import GeneralAlert from '@/components/common/info/GeneralAlert';
 const Index: NextPage = () => {
   const router = useRouter();
   TopPageAnimation(router);
@@ -64,7 +64,24 @@ const Index: NextPage = () => {
         </div>
         <div className={styles.mainWrapper} id='kotohazimeToKotobanome'>
           <p className='mt-12 text-center kiwi-maru'>コトハジメしませんか？</p>
-          <NormalButton title='ログイン&登録' url='login' isInside={true} />
+          {/* <NormalButton title='ログイン&登録' url='login' isInside={true} /> */}
+          <GeneralAlert
+            type='error'
+            title='さぼりエラー'
+            content={`大変恐縮ですが、技育博までに完成間に合いませんでした……\n名刺の1つ下にある、かどで日記というサービスは1年掛けて鋭意開発中ですので\nよろしければそちらをくださいませ。`}
+          />
+          <div className='flex flex-col justify-center items-center mt-12'>
+            <p>
+              <a className='text-2xl kiwi-maru' href='https://kadode.usuyuki.net'>
+                かどで日記
+              </a>
+            </p>
+            <p className='mt-8'>
+              <a className='text-2xl  kiwi-maru' href='https://github.com/Usuyuki'>
+                作者GitHub
+              </a>
+            </p>
+          </div>
         </div>
         <div className={styles.mainWrapper} id='kotobanome'>
           <h2 className='text-5xl text-center kiwi-maru'>
