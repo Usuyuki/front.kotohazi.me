@@ -2,7 +2,7 @@
 
 import type { NextPage } from 'next';
 import Layout from '@/components/layouts/VisitorLayout';
-import ReleaseNoteSentence from '@/components/sentence/ReleaseNoteSentence';
+import ReleaseNoteSentence from '@/components/common/sentence/ReleaseNoteSentence';
 import axios from '@/lib/axios';
 import UseSWR from 'swr';
 

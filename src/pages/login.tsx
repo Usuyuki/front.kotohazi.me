@@ -1,30 +1,27 @@
-/** @format */
+import React, { FC, useCallback } from 'react';
+import LoginElement from '@/components/login/LoginElement';
+import useOAuthUrl from '@/hooks/auth/useOauthUrl';
+import { Provider } from '@/types/models/OAuth';
 
-import type { NextPage } from 'next';
-import Layout from '@/components/layouts/VisitorLayout';
-import axios from 'axios';
+const EnhancedLogin: FC = () => {
+  const { error: socialLoginError, isLoading: socialLoginIsLoading, mutate: redirectOAuth } = useOAuthUrl();
+  const socialLoginStatusCode = socialLoginError?.response?.status;
+  const isLoading = socialLoginIsLoading;
 
-const handleSocialLoginRequest = async (provider: string) => {
-  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/login/${provider}`);
-  window.location.href = data.redirect_url;
-};
-const login: NextPage = () => {
+  const handleSocialLoginRequest = useCallback(
+    (provider: Provider) => {
+      redirectOAuth(provider);
+    },
+    [redirectOAuth],
+  );
+
   return (
-    <div>
-      <Layout titlePrefix='ログイン' pageTitle='ログイン' bgColorClass='bg-low' description='コトハジメのログイン'>
-        <div className='border-2 border-k_4 border-dashed'>
-          <button
-            type='submit'
-            onClick={() => {
-              handleSocialLoginRequest('google');
-            }}
-          >
-            Login with Google
-          </button>
-        </div>
-      </Layout>
-    </div>
+    <LoginElement
+      socialLoginStatusCode={socialLoginStatusCode}
+      isLoading={isLoading}
+      handleSocialLoginRequest={handleSocialLoginRequest}
+    />
   );
 };
 
-export default login;
+export default EnhancedLogin;
